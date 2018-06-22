@@ -17,17 +17,15 @@ Touch_test::~Touch_test()
     delete ui;
 }
 
-
-
 bool Touch_test::eventFilter(QObject *obj, QEvent *event)
 {
     if(event->type() != QEvent::DynamicPropertyChange && event->type() != QEvent::Paint) {
         static int eventEnumIndex = QEvent::staticMetaObject.indexOfEnumerator("Type");
         QString name = QEvent::staticMetaObject.enumerator(eventEnumIndex).valueToKey(event->type());
         qDebug() << obj->objectName() << event->type();
-        ui->plainTextEdit->moveCursor (QTextCursor::End);
-        ui->plainTextEdit->insertPlainText (name +"\n");
-        ui->plainTextEdit->moveCursor (QTextCursor::End);
+        ui->plainTextEdit->moveCursor(QTextCursor::End);
+        ui->plainTextEdit->insertPlainText(name + "\n");
+        ui->plainTextEdit->moveCursor(QTextCursor::End);
     }
     return false;
 }
