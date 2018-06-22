@@ -13,7 +13,7 @@ class Touch_test : public QDialog
         Q_OBJECT
 
     public:
-        explicit Touch_test(QWidget *parent = 0);
+        explicit Touch_test(QWidget *parent = nullptr);
         ~Touch_test();
 
     private:
