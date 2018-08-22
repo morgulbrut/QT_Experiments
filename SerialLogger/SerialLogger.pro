@@ -1,10 +1,10 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-08-22T15:52:27
+# Project created by QtCreator 2018-08-22T16:56:08
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
+QT       += core gui widgets printsupport
 
 TARGET = SerialLogger
 TEMPLATE = app
@@ -24,13 +24,15 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        seriallogger.cpp
+        mainwindow.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
-        seriallogger.h
+        mainwindow.h \
+    qcustomplot.h
 
 FORMS += \
-        seriallogger.ui
+        mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
