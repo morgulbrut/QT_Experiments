@@ -33,4 +33,4 @@ HEADERS += \
 FORMS += \
         touch_test.ui
 
-#CONFIG += console
+# CONFIG += console
